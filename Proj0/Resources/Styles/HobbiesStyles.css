@@ -1,0 +1,168 @@
+﻿
+* {
+  box-sizing: border-box;
+}
+
+/* SCSS Variable */
+body {
+	font-family: Helvetica, sans-serif;
+	font-size: 18px;
+	color: black;
+	background-color: tan;
+    margin-top:25px;
+}
+
+/* SCSS Nesting */
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;   
+}
+
+nav a {
+	display: block;
+	padding: 6px 12px;
+	text-decoration: none;    
+    color:black;
+    font-size:25px;    
+}
+
+/* SCSS Inheritance */
+.button-basic, .button-advanced, .button-moreadvanced {
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:5px;
+}
+
+.button-advanced  {
+  background-color:blanchedalmond;
+}
+
+.button-moreadvanced  {
+  background-color:lightslategray;
+}
+
+.pics-showcase {
+    list-style:none;
+    width: 100%;
+}
+
+.pics-showcase li {
+    display:block;
+    float: left;
+    width: 25%;
+}
+
+.photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;    
+}
+
+
+/*Zoom effect of pic*/
+.photo img {    
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s;
+}
+
+/*Zoom effect of pic during hover*/
+.photo img:hover {
+    transform: scale(1.03);
+}
+
+
+
+.blog-post {   
+    float:right;  
+    padding-bottom: 10px;
+}
+
+
+.orderedlist {   
+    float:left;
+    margin-bottom: 500px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  height:20px; 
+  margin:30px;
+}
+
+.main-text {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Media queries
+On screens that are 990px wide or less, the background color is lawngreen */
+@media screen and (max-width: 990px) {
+    body {
+        background-color: lawngreen;
+        color: white;
+    }
+}
+
+/* On screens that are 500px wide or less, the background color is lightblue */
+@media screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+        color: white;
+    }
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color :black;
+    text-align:center;
+}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.ClassHeader{
+    background-color: lightgray; border: ridge; text-decoration: solid;
+}
+
+.ClassRow{
+    background-color: white; border: ridge;
+}
+
+.AntiqueStyle{
+    width: 100%;
+    height: 450px;  
+}
+
+#HobbiesList {
+    float: left;
+}
+
+#PicsCollage {
+    float: left; margin-top: 150px;
+}
+
+.PicWidth {
+    width: 100%;
+}

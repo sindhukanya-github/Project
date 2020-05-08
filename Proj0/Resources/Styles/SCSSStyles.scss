@@ -1,0 +1,56 @@
+
+/*SCSS Variable */
+
+$myFont: Helvetica, sans-serif;
+$myColor: black;
+$backcolor :tan;
+$myFontSize: 18px;
+$myWidth: 680px;
+$mymargin :25px;
+
+body {
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+  background-color : $backcolor;
+  margin-top : $mymargin;
+}
+
+/*SCSS Nesting */
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    color:black;
+    font-size:25px;
+  }
+}
+
+/*SCSS Inheritance */
+.button-basic {
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:5px;
+}
+
+.button-advanced   {
+  @extend .button-basic;
+   background-color:blanchedalmond;
+}
+
+.button-moreadvanced {
+  @extend .button-basic;
+background-color:lightslategray;
+}
